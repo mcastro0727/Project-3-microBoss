@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const projectSchema = new Schema({
   user_name: { type: String, required: true },
   project_title: { type: String, required: true },
-  start_date: { type: Date, default: Date.now },
+  start_date: { type: Date, default: Date.now() },
   deadline_date: { type: Date }
 });
 
