@@ -16,7 +16,6 @@ const projectSeed = [
     start_date: new Date(Date.now()),
     deadline_date: new Date(Date)
   },
-  // JOHN && JANE working on the same project
   {
     _id: 2,
     user_name: "Jane Doe",
