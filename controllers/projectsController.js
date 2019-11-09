@@ -1,10 +1,8 @@
- const db = require("../models");
+const db = require("../models");
 
 // Defining methods for the ProjectsController
 controller = {
   findAll: function(req, res) {
-    console.log("findall");
-    // res.send("/api : Get");
     db.Project
     .find(req.query)
     .sort({ date: -1 })
@@ -13,16 +11,16 @@ controller = {
   },
   create: function(req, res) {
     console.log("create")
-    res.send("/api/projects : Post");
+    res.send("/api : Post");
   },
   findById: function(req, res) {
-    res.send("/api/projects/:id : Get");
+    res.send("/api/:id : Get");
   },
   update: function(req, res) {
-    res.send("/api/project/:id : Put");
+    res.send("/api/:id : Put");
   },
   remove: function(req, res) {
-    res.send("/api/project/:id : Delete");
+    res.send("/api/:id : Delete");
   }
 };
 module.exports = controller;

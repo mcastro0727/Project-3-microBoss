@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 ​
-// This file empties the Books collection and inserts the books below
+// This file empties the Projects collection and inserts the projects below
 ​
 mongoose.connect(
   process.env.MONGODB_URI ||
@@ -16,7 +16,6 @@ const projectSeed = [
     start_date: new Date(Date.now()),
     deadline_date: new Date(Date)
   },
-  // JOHN && JANE working on the same project
   {
     _id: 2,
     user_name: "Jane Doe",
