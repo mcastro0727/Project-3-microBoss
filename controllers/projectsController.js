@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 const db = require("../models");
+=======
+ const db = require("../models");
+>>>>>>> 8aaf8c6a1a516ac9b6226abf69db50ae08f3e5a8
 
 // Defining methods for the ProjectsController
-module.exports = {
+controller = {
   findAll: function(req, res) {
     console.log("findall");
     // res.send("/api : Get");
@@ -25,3 +29,4 @@ module.exports = {
     res.send("/api/:id : Delete");
   }
 };
+module.exports = controller;
