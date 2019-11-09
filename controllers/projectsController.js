@@ -1,10 +1,15 @@
-// const db = require("../models");
+ const db = require("../models");
 
 // Defining methods for the ProjectsController
-module.exports = {
+controller = {
   findAll: function(req, res) {
-    console.log("findall")
-    res.send("/api/projects : Get");
+    console.log("findall");
+    // res.send("/api : Get");
+    db.Project
+    .find(req.query)
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
     console.log("create")
@@ -20,3 +25,4 @@ module.exports = {
     res.send("/api/project/:id : Delete");
   }
 };
+module.exports = controller;
