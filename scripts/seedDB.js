@@ -14,7 +14,7 @@ const projectSeed = [
     user_name: "John Doe",
     project_title: "Google AdWords Campaign",
     start_date: new Date(Date.now()),
-    deadline_date: new Date(Date)
+    deadline_date: new Date()
   },
   // JOHN && JANE working on the same project
   {
@@ -22,35 +22,35 @@ const projectSeed = [
     user_name: "Jane Doe",
     project_title: "Google AdWords Campaign",
     start_date: new Date(Date.now()),
-    deadline_date: new Date(Date)
+    deadline_date: new Date()
   },
   {
     _id: 3,
     user_name: "Elon Musk",
     project_title: "Colonize Mars",
     start_date: new Date(Date.now()),
-    deadline_date: new Date(Date)
+    deadline_date: new Date()
   },
   {
     _id: 4,
-    user_name: "Bobby Schmurda",
-    project_title: "Get out of jail",
+    user_name: "Nikola Tesla",
+    project_title: "create the coil",
     start_date: new Date(Date.now()),
-    deadline_date: new Date(Date)
+    deadline_date: new Date()
   },
   {
     _id: 5,
-    user_name: "Edward Snowden",
-    project_title: "Expose NSA surveillance",
+    user_name: "Leonardo Da Vinci",
+    project_title: "thinking whats going on 500 years from now",
     start_date: new Date(Date.now()),
-    deadline_date: new Date(Date)
+    deadline_date: new Date()
   },
   {
     _id: 6,
     user_name: "Julian Assange",
     project_title: "Re-launch Wikileaks",
     start_date: new Date(Date.now()),
-    deadline_date: new Date(Date)
+    deadline_date: (new Date).getDay()
   }
   
 ];
