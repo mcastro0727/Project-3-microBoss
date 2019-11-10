@@ -43,9 +43,13 @@ controller = {
     res.send("/api/:id : Put");
   },
   remove: function(req, res) {
-    db.Project.deleteOne({
-      id: req.params.id
-    })
+    const id = req.params.id;
+    db.Project
+      .remove({ _id: id })
+      .exec()
+      .then(result => {
+        res.status(200).json(result)
+      }).catch(err => res.status(500).json(err));
     res.send("/api/:id : Delete");
   }
 };
