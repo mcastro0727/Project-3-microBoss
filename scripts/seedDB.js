@@ -11,10 +11,10 @@ mongoose.connect(
 const projectSeed = [
   {
     _id: 1,
-    user_name: "John Doe",
-    project_title: "Google AdWords Campaign",
-    start_date: new Date(Date.now()),
-    deadline_date: new Date()
+    user_name: "james",
+    project_title: "MicroBoss",
+    start_date: "11/2/2019",
+    deadline_date: "12/5/2019"
   },
   {
     _id: 2,

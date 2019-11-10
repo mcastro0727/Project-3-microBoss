@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 //const seeds = require('../scripts/seedDB')
 
 const projectSchema = new Schema({
+  _id: { type: Number, required: true },
   user_name: { type: String, required: true },
   project_title: { type: String, required: true },
   start_date: { type: Date, default: Date.now() },
