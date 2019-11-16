@@ -3,13 +3,13 @@ const projectsController = require("../../controllers/projectsController");
 
 // Matches with "/api/projects"
 router
-  .route("/")
+  .route("/projects")
   .get(projectsController.findAll)
   .post(projectsController.create);
 
 // Matches with "/api/projects/:id"
 router
-  .route("/:id")
+  .route("/projects/:id")
   .get(projectsController.findById)
   .put(projectsController.update)
   .delete(projectsController.remove);

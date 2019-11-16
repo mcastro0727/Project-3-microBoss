@@ -20,9 +20,9 @@ class Books extends Component {
   }
 
   loadBooks = () => {
-    API.getBooks()
+    API.getProjects()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ projects: res.data, title: "", author: "", synopsis: "" })
       )
       .catch(err => console.log(err));
   };
@@ -92,7 +92,7 @@ class Books extends Component {
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
-            {this.state.books.length ? (
+            {this.state.projects.length ? (
               <List>
                 {this.state.books.map(book => (
                   <ListItem key={book._id}>
