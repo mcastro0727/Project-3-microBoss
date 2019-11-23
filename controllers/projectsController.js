@@ -4,6 +4,7 @@ const db = require("../models");
 controller = {
   // SIGMA(get)
   findAll: function(req, res) {
+<<<<<<< HEAD
     db.Project
     .find(req.query)
     //.sort({ date: -1 })
@@ -20,6 +21,16 @@ controller = {
       console.log(err);
     })
     //res.send("/api : Post");
+=======
+    db.Project.find(req.query)
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  create: function(req, res) {
+    console.log("create");
+    res.send("/api : Post");
+>>>>>>> 1ea753f71011a1fbfb15612719ca13b5fc8709ff
   },
   // GET / the /:id for the api
   findById: function(req, res) {
