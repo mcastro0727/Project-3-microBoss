@@ -4,10 +4,11 @@ import Books from "./pages/Books";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 // import SignUpCreds from "./pages/SignUpCreds";
-// import Nav from "./components/Nav";
+import Nav from "./components/Nav";
 function App() {
   return (
     <div>
+      <Nav />
       <Books />
       <Signup />
       <Login />
