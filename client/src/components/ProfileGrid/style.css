@@ -1,0 +1,41 @@
+
+body{
+    width: available;
+    height: available;
+}
+
+.container{
+    width: available;
+    height: available;
+}
+
+.leftpane{
+    width: 20%;
+    min-width: 66px;
+    height: available;
+    min-height: 650px;
+    float: left;
+    background-color: rosybrown;
+    border-collapse: collapse;
+}
+
+.middlepane{
+   width: 50%;
+   min-width: 722px;
+   height: available;
+   min-height: 650px;
+   float: left;
+   background-color: royalblue;
+   border-collapse: collapse;
+}
+
+.rightpane{
+    width: available;
+    height: 50%;
+    min-height: 650px;
+    position: relative;
+    margin-left: 78.8%;
+    background-color: yellow;
+    border-collapse: collapse;
+}
+
