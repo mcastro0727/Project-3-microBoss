@@ -1,67 +1,66 @@
-import React, { Component } from 'react'
-import { Container } from 'react-bootstrap'
-import './style.css'
 import API from '../../utils/API';
 import UserProjectScope from '../UserProjectScope'
 
 
+
 class ProfileGrid extends React.Component {
+
     
     state = {
         userProjects: []
     }
 
-    
+
+
     componentDidMount() {
+
+       this.getProjects();
+        console.log(this.state.userProjects)
+    }
+
+    getProjects = () => {
         
-        API.getProjects(this.props.userName)
-            .then(e => {
-                //const dbDATA = e.data
-                // console.log(e.data)
-
-                const newObject = [];
-
-                e.data.map(data => {
-                    newObject.push(data);
-                    
-                })
-                
-                this.setState({ userProjects: newObject })
-                console.log(this.state)
-                
-            })
+        API.getProjects()
+            .then(e => 
+                this.setState({ 
+                    userProjects: e.data
+                 })
+            )
             .catch(err => console.log(err));
-        
-    }
-
-    handleProjectList = () => {
 
     }
-    //const [userProjects, extendProject] = useState(props);
-    // /.\ -possibly change 'props to a method that takes intialState as the const *?|?*
 
+    
+
+    // method for hide form, show data
+    // method for hide data, show form
 
 
     render() {
-        // console.log(this.state.userProjects)
-        const Projs = this.state.userProjects;
-
+        const projects = this.state.userProjects;
+        console.log(projects)
+        
         return (
             <React.Fragment>
 
                 <Container>
                     <div className="leftpane"><h1>Project List</h1> <br />
-                        <h4>hello</h4>
-                        {}
+                        <button type="button" >Create New Project</button>
                         <br />
+                        <br/>
+                        {projects.map((project) => {
+                            return (
 
+                                <button type='button' key={project.id}>{project.projectTitle}</button>
+                            )
+                            })}
                     </div>
 
                     <div className="middlepane"><h1>Project Scope</h1> <br />
-                       <UserProjectScope />
+                        <UserProjectScope />
                     </div>
 
-                    <div className="rightpane"><h1>Chat Box</h1>
+                    <div className="rightpane"><h1>INFO Box</h1>
                     </div>
                 </Container>
 

@@ -1,4 +1,5 @@
-import React, { Component, useState }  from 'react'
+import React, { Component }  from 'react'
+import ProjectForm from '../ProjectForm'
 
 class UserProjectScope extends Component {
     constructor(props) {
@@ -29,16 +30,12 @@ class UserProjectScope extends Component {
 
 
     render() {
-
         // ARGGGG
-        
-        
-
 
         return(
             <React.Fragment>
                 <h1>SCOPE</h1>
-                
+                <ProjectForm />
 
             </React.Fragment>
         )
