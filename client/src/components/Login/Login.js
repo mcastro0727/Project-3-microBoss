@@ -135,8 +135,8 @@ class Login extends Component {
                   <div className="control">
                     <input
                       className="input"
-                      type="text"
-                      placeholder="First and Last Name"
+                      type="Email"
+                      placeholder="Email"
                     ></input>
                   </div>
 
@@ -147,7 +147,7 @@ class Login extends Component {
                         <input
                           className="input"
                           type="password"
-                          placeholder="Email"
+                          placeholder="Password"
                         ></input>
                         <a href="">Confirm</a>
                       </div>
